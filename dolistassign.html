@@ -18,36 +18,8 @@
         crossorigin="anonymous"></script>
 </head>
 
-<body>
-    <script>
-        var dolist=[ ];
-        function todo(){
-        let ls = document.getElementById("txt1");
-        dolist.push(ls.value);
-        console.log(dolist);
-        console.log(dolist[0]);
-    
-        
-
-
-            for (let lis of dolist) {
-               var li = document.createElement("li");
-
-                li.innerText=lis;
-                var btn = document.createElement("button")
-                btn.innerText = "Remove";
-                var btn1 = document.createElement("button")
-                btn1.innerText = "Move";
-              
-            
-            }
-               
-            
-                document.getElementById("mylist").appendChild(li)
-                li.appendChild(btn);
-                li.appendChild(btn1);
-               
-        }
+<body style="background-color:dimgray">
+    <script src="todo.js">
 
     </script>
     <div class="row">
@@ -61,21 +33,30 @@
                     <input class="form-control" type="text" id="txt1">
                 </div>
             </form>
-                <div style="padding-top:30px;margin-left:30px;">
-                    <button class="btn btn-primary" onclick="todo()">Add</button>
-                </div>
-           
+            <div style="padding-top:30px;margin-left:30px;">
+                <button class="btn btn-primary" onclick="todo()">Add</button>
+            </div>
+            <div>
+                <ul id="mylist">
+
+                </ul>
+            </div>
+
         </div>
         <div class="col-sm-6" style="padding-left: 250px;padding-top:30px;color:brown;background-color: darksalmon;">
             <h1>TOMORROW</h1>
+            <div>
+                <ul id="mytomlist">
+
+                </ul>
+            </div>
         </div>
 
-    </div>
-   
-</body>
-<div>
-        <ul id="mylist">
 
-        </ul>
     </div>
+
+</body>
+
+
+
 </html>
